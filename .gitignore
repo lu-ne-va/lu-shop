@@ -1,0 +1,5 @@
+node_modules
+app/bower
+.idea
+psd
+app/build
