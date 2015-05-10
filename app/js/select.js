@@ -1,0 +1,3 @@
+$(function() {
+    $("#day, #month").selectmenu();
+});

@@ -38,8 +38,53 @@
                 </div>
                 <div class="contact-form__input-group input-group clearfix">
                     <label class="input-group__label" for="day">Дата звонка</label>
-                    <input type="number" name="day" class="input-group__input input-group__input_sm" id="day" placeholder=""  required>
-                    <input type="number" name="month" class="input-group__input input-group__input_sm" id="month" placeholder=""  required>
+                    <select name="month" class="input-group__input input-group__input_sm" id="month" required>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option selected="selected">5</option>
+                        <option>6</option>
+                        <option>7</option>
+                        <option>8</option>
+                        <option>9</option>
+                        <option>10</option>
+                        <option>11</option>
+                        <option>12</option>
+                    </select>
+                    <select name="day" id="day" class="input-group__input input-group__input_sm" required>
+                        <option>01</option>
+                        <option>02</option>
+                        <option>03</option>
+                        <option>04</option>
+                        <option>05</option>
+                        <option>06</option>
+                        <option>07</option>
+                        <option>08</option>
+                        <option>09</option>
+                        <option>10</option>
+                        <option>11</option>
+                        <option>12</option>
+                        <option>13</option>
+                        <option>14</option>
+                        <option>15</option>
+                        <option>16</option>
+                        <option selected="selected">17</option>
+                        <option>18</option>
+                        <option>19</option>
+                        <option>20</option>
+                        <option>21</option>
+                        <option>22</option>
+                        <option>23</option>
+                        <option>24</option>
+                        <option>25</option>
+                        <option>26</option>
+                        <option>27</option>
+                        <option>28</option>
+                        <option>29</option>
+                        <option>30</option>
+                        <option>31</option>
+                    </select>
                 </div>
                 <div class="contact-form__input-group input-group clearfix">
                     <textarea type="text" name="comment" class="input-group__textarea" id="comment" placeholder="Комментарий"  required></textarea>
@@ -69,34 +114,46 @@
                     <div class="slider__list--wrap">
                         <ul class="slider__list">
                             <li class="slider__item active">
-                                <img src="//lorempixel.com/500/300" alt=""/>
+                                <div class="slider__item-img" style="background-image: url('img/slider-1.png')"></div>
+                                <div class="slider__item-description">
+                                    <a class="slider__item-description-link" href="#">iMac за пол цены</a>
+                                    <span class="slider__item-description-text">Принеси свой старый Mac  и получи скидку на новый!</span>
+                                </div>
                             </li>
                             <li class="slider__item">
-                                <img src="//lorempixel.com/500/305" alt=""/>
+                                <div class="slider__item-img" style="background-image: url('img/slider-1.png')"></div>
+                                <div class="slider__item-description">
+                                    <a class="slider__item-description-link" href="#">iMac за пол цены</a>
+                                    <span class="slider__item-description-text">Принеси свой старый Mac  и получи скидку на новый!</span>
+                                </div>
                             </li>
                             <li class="slider__item">
-                                <img src="//lorempixel.com/500/302" alt=""/>
+                                <div class="slider__item-img" style="background-image: url('img/slider-1.png')"></div>
+                                <div class="slider__item-description">
+                                    <a class="slider__item-description-link" href="#">iMac за пол цены</a>
+                                    <span class="slider__item-description-text">Принеси свой старый Mac  и получи скидку на новый!</span>
+                                </div>
                             </li>
                             <li class="slider__item">
-                                <img src="//lorempixel.com/500/304" alt=""/>
+                                <div class="slider__item-img" style="background-image: url('img/slider-1.png')"></div>
+                                <div class="slider__item-description">
+                                    <a class="slider__item-description-link" href="#">iMac за пол цены</a>
+                                    <span class="slider__item-description-text">Принеси свой старый Mac  и получи скидку на новый!</span>
+                                </div>
                             </li>
                             <li class="slider__item">
-                                <img src="//lorempixel.com/500/306" alt=""/>
+                                <div class="slider__item-img" style="background-image: url('img/slider-1.png')"></div>
+                                <div class="slider__item-description">
+                                    <a class="slider__item-description-link" href="#">iMac за пол цены</a>
+                                    <span class="slider__item-description-text">Принеси свой старый Mac  и получи скидку на новый!</span>
+                                </div>
                             </li>
                         </ul>
-
-                        <ul class="slider__dots">
-
-
-
-
-                        </ul>
-
                     </div>
 
                     <div class="slider__controls">
-                        <a class="slider__controls-button slider__controls-button_next" href="#"> Пред. </a>
-                        <a class="slider__controls-button slider__controls-button_prev" href="#"> След. </a>
+                        <a class="slider__controls-button slider__controls-button_next" href="#"> След. </a>
+                        <a class="slider__controls-button slider__controls-button_prev" href="#"> Пред. </a>
                     </div>
 
                 </div>
@@ -322,5 +379,7 @@
 <script src="bower/jquery/dist/jquery.js"></script>
 <script src="js/main.js"></script>
 <script src="js/slider.js"></script>
+<script src="js/jquery-ui.js"></script>
+<script src="js/select.js"></script>
 </body>
 </html>
