@@ -1,0 +1,109 @@
+.goods {
+    &__block {
+        position: relative;
+        text-align: center;
+        margin-bottom: 34px;
+
+        &:before {
+            content: "";
+            border-bottom: 1px solid #5c7b98;
+            position: absolute;
+            top: 16px;
+            left: 0;
+            right: 0;
+        }
+    }
+    &__block-head {
+        display: inline-block;
+        position: relative;
+        z-index: 2;
+        background-color: #FFFFFF;
+        padding: 5px 16px 3px;
+        color: #5c7b98;
+        font-size: 25px;
+        font-family: 'Elektra-Medium', 'sans-serif';
+        font-weight: 100;
+    }
+    &__list {
+        display: block;
+        margin: 6px auto;
+        margin-left: -21px;
+
+    }
+
+    &__item {
+        display: inline-block;
+        margin: 0 auto;
+        border: 1px solid #dae1eb;
+        width: 230px;
+        box-sizing: border-box;
+        transition: all .3s;
+        padding: 10px;
+
+        &:hover {
+            -webkit-box-shadow: 0 1px 8px rgba(0,0,0,.15);
+            -moz-box-shadow: 0 1px 8px rgba(0,0,0,.15);
+            box-shadow: 0 1px 8px rgba(0,0,0,.15)
+        }
+
+    }
+
+}
+
+.good {
+    vertical-align: top;
+    margin-left: 21px;
+
+
+    &__photo-and-name {
+        margin-bottom: 10px;
+    }
+    &__photo {
+        display: table-cell;
+        width: 90px;
+        height: 100px;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+
+    }
+    &__name {
+        display: table-cell;
+        background-size: cover;
+        color: #00b9fe;
+        text-decoration: underline;
+        width: 130px;
+        vertical-align: middle;
+        line-height: 20px;
+        text-align: left;
+        padding-left: 10px;
+        box-sizing: border-box;
+        transition: all .3s;
+
+        &:hover {
+            color: #613993;
+
+        }
+
+    }
+    &__description {
+        display: table-row;
+
+        &-name {
+            display: table-cell;
+            text-decoration: none;
+            color: #5c7b98;
+            text-underline: none;
+            text-align: left;
+            padding: 3px 0 3px 5px;
+            width: 80px;
+        }
+        &-text {
+            display: table-cell;
+            text-decoration: none;
+            color: #5c7b98;
+            text-align: left;
+            padding: 3px 0 3px 22px;
+        }
+    }
+}

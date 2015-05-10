@@ -5,25 +5,61 @@
     margin-top: -238px;
 
     &__content {
-        padding-top: 60px;
+        padding-top: 64px;
+        width: 1000px;
+        margin: 0 auto;
     }
     &__link {
         color: #FFFFFF;
         font-weight: 200;
         font-size: 15px;
+        text-decoration: underline;
+        
+        &_market {
+            width: 90px;
+            height: 35px;
+            margin: 8px 0 0 5px;
+            display: inline-block;
+
+            &-app {
+                background: url("../img/markets.png") no-repeat 0 0;
+            }
+            &-g {
+                background: url("../img/markets.png") no-repeat -95px 0;
+            }
+        }
+
+        &_social {
+            width: 47px;
+            height: 51px;
+            margin: 20px 4px 0 0;
+            display: inline-block;
+
+            &-vk {
+                background-image: url("../img/socials-vk.png");
+                background-size: cover;
+            }
+            &-f {
+                background-image: url("../img/socials-f.png");
+                background-size: cover;
+            }
+            &-t {
+                background-image: url("../img/socials-t.png");
+                background-size: cover;
+            }
+        }
+    }
+    &__list-item {
+        margin: 10px 0;
     }
 }
 
 .col {
     color: #FFFFFF;
 
-    &_sm {
-
-    }
-    &_lg {
-
-    }
     &__head {
-        font-weight: bold;
+        font-family: 'Elektra-Medium', 'sans-serif';
+        font-weight: 100;
+        font-size: 15px;
     }
 }

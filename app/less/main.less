@@ -21,6 +21,13 @@ html, body {
         display: table;
     }
 }
+a {
+    text-decoration: none;
+    word-break: break-all
+}
+span {
+    word-break: break-all
+}
 
 .wrapper {
     position:relative;
@@ -36,15 +43,27 @@ html, body {
 
 .content {
     width: 1000px;
-    margin: 38px auto 70px;
+    margin: 38px auto 35px;
 
     &__left-col {
         float: left;
         width: 230px;
+
+        &_sm {
+            width: 160px;
+        }
+
+        &_margin-left-40 {
+            margin-right: 30px;
+        }
     }
-    &__right-col {
+    &__right {
         float: right;
-        width: 740px;
+
+        &-col {
+            width: 740px;
+            float: right;
+        }
     }
 }
 .logo {
@@ -54,7 +73,7 @@ html, body {
     margin-bottom: 25px;
     &_white {
         background: url("../img/logo-white.png") no-repeat;
-        margin-top: 40px;
+        margin-top: 36px;
     }
 }
 

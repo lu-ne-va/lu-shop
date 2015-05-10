@@ -3,5 +3,8 @@
   "dependencies": {
     "jquery": "1.11",
     "normalize.css": "~3.0.3"
+  },
+  "devDependencies": {
+    "html5shiv": "~3.7.2"
   }
 }
