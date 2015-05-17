@@ -1,7 +1,9 @@
+@import "main.less";
+
 .footer {
     position: relative;
     background-image: url("../img/footer-pattern.png");
-    background-color:#613993;
+    background-color: #613993;
     height: 238px;
     margin-top: -238px;
 
@@ -9,17 +11,32 @@
         padding-top: 64px;
         width: 1000px;
         margin: 0 auto;
+        .clearfix;
+    }
+}
+
+.col {
+    color: #FFFFFF;
+
+    &__head {
+        font-family: 'Elektra-Medium', 'sans-serif';
+        font-weight: 100;
+        font-size: 15px;
     }
     &__link {
         color: #FFFFFF;
         font-weight: 200;
         font-size: 15px;
         text-decoration: underline;
-        
+
+        &:hover {
+            color: #00b9fe;
+        }
+
         &_market {
             width: 90px;
             height: 35px;
-            margin: 8px 0 0 5px;
+            margin: 8px 0 0 4px;
             display: inline-block;
 
             &-app {
@@ -31,9 +48,9 @@
         }
 
         &_social {
-            width: 47px;
-            height: 51px;
-            margin: 20px 4px 0 0;
+            width: 50px;
+            height: 44px;
+            margin: 24px 0 0 0;
             display: inline-block;
 
             &-vk {
@@ -53,14 +70,8 @@
     &__list-item {
         margin: 10px 0;
     }
-}
+    &__social-icons-list {
+        font-size: 0;
 
-.col {
-    color: #FFFFFF;
-
-    &__head {
-        font-family: 'Elektra-Medium', 'sans-serif';
-        font-weight: 100;
-        font-size: 15px;
     }
 }

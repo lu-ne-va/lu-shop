@@ -23,20 +23,20 @@
 </head>
 <body>
 <div class="wrapper">
-    <div class="content clearfix">
+    <div class="content">
         <div class="content__left-col">
             <div class="logo"></div>
-            <form id="massage-form" class="contact-form clearfix">
+            <form id="massage-form" class="contact-form" action="php/send.php">
                 <span class="contact-form__header">Заказать звонок</span>
-                <div class="contact-form__input-group input-group clearfix">
+                <div class="contact-form__input-group input-group">
                     <label class="input-group__label" for="name">Ваше имя</label>
                     <input type="text" name="name" class="input-group__input" id="name" placeholder="Константин" required>
                 </div>
-                <div class="contact-form__input-group input-group clearfix">
+                <div class="contact-form__input-group input-group">
                     <label class="input-group__label" for="phone">Телефон</label>
                     <input type="text" name="phone" class="input-group__input" id="phone" placeholder="+7 (912) 000-00-00"  required>
                 </div>
-                <div class="contact-form__input-group input-group clearfix">
+                <div class="contact-form__input-group input-group">
                     <label class="input-group__label" for="day">Дата звонка</label>
                     <select name="month" class="input-group__input input-group__input_sm" id="month" required>
                         <option>1</option>
@@ -86,13 +86,13 @@
                         <option>31</option>
                     </select>
                 </div>
-                <div class="contact-form__input-group input-group clearfix">
+                <div class="contact-form__input-group input-group">
                     <textarea type="text" name="comment" class="input-group__textarea" id="comment" placeholder="Комментарий"  required></textarea>
                 </div>
                 <button class="input-group__btn btn btn_blue btn_left" type="submit" >Отправить</button>
                 <button class="input-group__btn btn btn_grey btn_right" type="reset">Очистить</button>
             </form>
-            <ul class="images clearfix">
+            <ul class="images">
                 <li class="images__item" style="background-image: url('//lorempixel.com/70/71')"></li>
                 <li class="images__item" style="background-image: url('//lorempixel.com/73/70')"></li>
                 <li class="images__item" style="background-image: url('//lorempixel.com/70/74')"></li>
@@ -164,7 +164,9 @@
                     <div class="goods__list">
                         <a href="#" class="goods__item good">
                             <div class="good__photo-and-name">
-                            <div class="good__photo" style="background-image: url('img/product-1.png')"></div>
+                                <div class="good__photo-container">
+                                    <img class="good__photo" src="img/product-1.png"/>
+                                </div>
                             <span class="good__name">Apple Thunderb Display 27"</span>
                             </div>
                             <div class="good__description">
@@ -190,7 +192,9 @@
                         </a>
                         <a href="#" class="goods__item good">
                             <div class="good__photo-and-name">
-                            <div class="good__photo" style="background-image: url('img/product-2.png')"></div>
+                                <div class="good__photo-container">
+                                    <img class="good__photo" src="img/product-2.png"/>
+                                </div>
                             <span class="good__name">Apple Thunderb Display 27"</span>
                             </div>
                             <div class="good__description">
@@ -216,7 +220,9 @@
                         </a>
                         <a href="#" class="goods__item good">
                             <div class="good__photo-and-name">
-                            <div class="good__photo" style="background-image: url('img/product-3.png')"></div>
+                                <div class="good__photo-container">
+                                    <img class="good__photo" src="img/product-3.png"/>
+                                </div>
                             <span class="good__name">Apple Thunderb Display 27"</span>
                             </div>
                             <div class="good__description">
@@ -247,7 +253,9 @@
                     <div class="goods__list">
                         <a href="#" class="goods__item good">
                             <div class="good__photo-and-name">
-                            <div class="good__photo" style="background-image: url('img/product-1.png')"></div>
+                                <div class="good__photo-container">
+                                    <img class="good__photo" src="img/product-1.png"/>
+                                </div>
                             <span class="good__name">Apple Thunderb Display 27"</span>
                             </div>
                             <div class="good__description">
@@ -273,7 +281,9 @@
                         </a>
                         <a href="#" class="goods__item good">
                             <div class="good__photo-and-name">
-                            <div class="good__photo" style="background-image: url('img/product-2.png')"></div>
+                                <div class="good__photo-container">
+                                    <img class="good__photo" src="img/product-2.png"/>
+                                </div>
                             <span class="good__name">Apple Thunderb Display 27"</span>
                             </div>
                             <div class="good__description">
@@ -299,7 +309,9 @@
                         </a>
                         <a href="#" class="goods__item good">
                             <div class="good__photo-and-name">
-                            <div class="good__photo" style="background-image: url('img/product-3.png')"></div>
+                                <div class="good__photo-container">
+                                    <img class="good__photo" src="img/product-3.png"/>
+                                </div>
                             <span class="good__name">Apple Thunderb Display 27"</span>
                             </div>
                             <div class="good__description">
@@ -330,56 +342,58 @@
     </div>
 </div>
 <footer class="footer">
-    <div class="footer__content clearfix">
+    <div class="footer__content">
         <div class="content__left-col  content__left-col_margin-left-40">
             <div class="logo logo_white"></div>
         </div>
         <div class="content__left-col content__left-col_sm">
             <ul class="col">
                 <li class="col__head">О магазине</li>
-                <li class="footer__list-item"><a class="footer__link" href="#">О нас</a></li>
-                <li class="footer__list-item"><a class="footer__link" href="#">Наши цены</a></li>
-                <li class="footer__list-item"><a class="footer__link" href="#">Наши скидки</a></li>
-                <li class="footer__list-item"><a class="footer__link" href="#">Акции</a></li>
+                <li class="col__list-item"><a class="col__link" href="#">О нас</a></li>
+                <li class="col__list-item"><a class="col__link" href="#">Наши цены</a></li>
+                <li class="col__list-item"><a class="col__link" href="#">Наши скидки</a></li>
+                <li class="col__list-item"><a class="col__link" href="#">Акции</a></li>
             </ul>
         </div>
         <div class="content__left-col content__left-col_sm">
             <ul class="col">
                 <li class="col__head">Каталог</li>
-                <li class="footer__list-item"><a class="footer__link" href="#">Смартфоны</a></li>
-                <li class="footer__list-item"><a class="footer__link" href="#">Планшеты</a></li>
-                <li class="footer__list-item"><a class="footer__link" href="#">Компьютеры</a></li>
-                <li class="footer__list-item"><a class="footer__link" href="#">Аксесуары</a></li>
+                <li class="col__list-item"><a class="col__link" href="#">Смартфоны</a></li>
+                <li class="col__list-item"><a class="col__link" href="#">Планшеты</a></li>
+                <li class="col__list-item"><a class="col__link" href="#">Компьютеры</a></li>
+                <li class="col__list-item"><a class="col__link" href="#">Аксесуары</a></li>
             </ul>
         </div>
         <div class="content__left-col content__left-col_sm">
             <ul class="col">
                 <li class="col__head">Контакты</li>
-                <li class="footer__list-item"><a class="footer__link" href="#">Телефоны</a></li>
-                <li class="footer__list-item"><a class="footer__link" href="#">Адреса</a></li>
-                <li class="footer__list-item"><a class="footer__link" href="#">Карта проезда</a></li>
-                <li class="footer__list-item"><a class="footer__link" href="#">Обратная связь</a></li>
+                <li class="col__list-item"><a class="col__link" href="#">Телефоны</a></li>
+                <li class="col__list-item"><a class="col__link" href="#">Адреса</a></li>
+                <li class="col__list-item"><a class="col__link" href="#">Карта проезда</a></li>
+                <li class="col__list-item"><a class="col__link" href="#">Обратная связь</a></li>
             </ul>
         </div>
         <div class="content__right">
-            <ul class="col">
+            <ul class="col col__social-icons-list">
                 <li>
-                    <a href="#" class="footer__link footer__link_market footer__link_market-app"></a>
-                    <a href="#" class="footer__link footer__link_market footer__link_market-g"></a>
+                    <a href="#" class="col__link col__link_market col__link_market-app"></a>
+                    <a href="#" class="col__link col__link_market col__link_market-g"></a>
                 </li>
                 <li>
-                    <a href="#" class="footer__link footer__link_social footer__link_social-vk"></a>
-                    <a href="#" class="footer__link footer__link_social footer__link_social-f"></a>
-                    <a href="#" class="footer__link footer__link_social footer__link_social-t"></a>
+                    <a href="#" class="col__link col__link_social col__link_social-vk"></a>
+                    <a href="#" class="col__link col__link_social col__link_social-f"></a>
+                    <a href="#" class="col__link col__link_social col__link_social-t"></a>
                 </li>
             </ul>
         </div>
     </div>
 </footer>
 <script src="bower/jquery/dist/jquery.js"></script>
+<script src="js/jquery.nicescroll.min.js"></script>
 <script src="js/main.js"></script>
 <script src="js/slider.js"></script>
 <script src="js/jquery-ui.js"></script>
 <script src="js/select.js"></script>
+<script src="js/placeholders.jquery.min.js"></script>
 </body>
 </html>

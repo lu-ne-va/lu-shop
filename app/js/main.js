@@ -51,11 +51,11 @@ var validate = {
      * @param $form
      */
     clearAll: function ($form) {
-        this.$form = $form;
-        var t = this;
+        var that = this;
+        that.$form = $form;
 
-        this.$form.find('.form__input').each(function () {
-            t.clearOne($(this))
+        that.$form.find('.form__input').each(function () {
+            that.clearOne($(this))
         });
     },
 
@@ -80,7 +80,7 @@ $(function () {
             var form_data = $(this).serialize(); //собераем все данные из формы
             $.ajax({
                 type: "POST", //Метод отправки
-                url: "php/send.php", //путь до php фаила отправителя
+                url: $formSend.attr("action"), //путь до php фаила отправителя
                 data: form_data,
                 success: function () {
                     alert("Ваше сообщение отпрвлено!");
