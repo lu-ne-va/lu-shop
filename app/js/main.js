@@ -5,12 +5,12 @@ var validate = {
      * @returns {boolean}
      */
     checkData: function ($form) {
-        this.$form = $form;
-        var t = this;
-        this.valid = true;
+        var that = this;
+        that.$form = $form;
+        that.valid = true;
 
-        this.$form.find('.form__input').each(function () {
-            t.checkInput($(this));
+        this.$form.find('.input-group__input').each(function () {
+            that.checkInput($(this));
         });
 
         return this.valid;
@@ -35,7 +35,7 @@ var validate = {
      * @param $input
      */
     showTooltip: function ($input) {
-        $input.closest('.form__group').find('.tooltip').css({'display': 'inline-block'});
+        $input.closest('.input-group').find('.contact-form__tooltip').css({'display': 'inline-block'});
     },
 
     /**
@@ -54,7 +54,7 @@ var validate = {
         var that = this;
         that.$form = $form;
 
-        that.$form.find('.form__input').each(function () {
+        that.$form.find('.input-group__input').each(function () {
             that.clearOne($(this))
         });
     },
@@ -64,7 +64,7 @@ var validate = {
      * @param $input
      */
     clearOne: function ($input) {
-        $input.closest('.form__group').find('.tooltip').css({'display': 'none'});
+        $input.closest('.input-group').find('.contact-form__tooltip').css({'display': 'none'});
         $input.removeClass('error');
     }
 };
@@ -76,7 +76,7 @@ $(function () {
     var $formSend = $('#massage-form');
     $formSend.on('submit', function (e) {
         e.preventDefault();
-        //if (validate.checkData($(this))) {
+        if (validate.checkData($(this))) {
             var form_data = $(this).serialize(); //собераем все данные из формы
             $.ajax({
                 type: "POST", //Метод отправки
@@ -86,7 +86,7 @@ $(function () {
                     alert("Ваше сообщение отпрвлено!");
                 }
             });
-        //}
+        }
     });
 
     //Очистка форм
@@ -95,7 +95,7 @@ $(function () {
     });
 
     //Валидация изменений в инпутах формы
-    $('.form__input').on('keyup', function () {
+    $('.input-group__input').on('keyup', function () {
         validate.checkInput($(this))
     });
 });
